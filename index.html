@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MR Décor — Création CNC & décoration</title>
+<link rel="icon" type="image/png"  href="images/iconn.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Markazi+Text:wght@500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo"><span class="dot"></span>MR Décor</div>
+    <nav class="links">
+      <a href="#categories" data-i18n="nav.categories">Catégories</a>
+      <a href="#comment" data-i18n="nav.comment">Comment ça marche</a>
+      <a href="#produits" data-i18n="nav.produits">Créations</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Langue">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <a class="cart-btn" href="commande.html">
+        <span data-i18n="header.cart">Panier</span> <span class="cart-badge" id="cartBadge" style="display:none;">0</span>
+      </a>
+    </div>
+    <div class="burger mono" style="font-size:12px;" data-i18n="header.menu">MENU</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" data-i18n="hero.eyebrow">Création CNC & décoration</div>
+      <h1 data-i18n="hero.title" data-i18n-html="true">La précision d'une machine, <em>l'âme</em> d'un atelier.</h1>
+      <p class="lead" data-i18n="hero.lead">MR Décor est l'atelier CNC qui donne vie à vos idées déco — panneaux ajourés, luminaires, mobilier et objets gravés, fabriqués à la demande.</p>
+      <div class="hero-actions">
+        <a href="#produits" class="btn solid" data-i18n="hero.cta1">Découvrir les créations</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="num">3 800+</div><div class="lbl" data-i18n="hero.stat1">Commandes livrées</div></div>
+        <div><div class="num">4.9/5</div><div class="lbl" data-i18n="hero.stat2">Note moyenne clients</div></div>
+        <div><div class="num">48 h</div><div class="lbl" data-i18n="hero.stat3">Délai moyen</div></div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <svg viewBox="0 0 400 400">
+        <circle class="crosshair" cx="200" cy="200" r="180" stroke-dasharray="2 6"/>
+        <line class="crosshair" x1="200" y1="10" x2="200" y2="390"/>
+        <line class="crosshair" x1="10" y1="200" x2="390" y2="200"/>
+        <text class="coord" x="205" y="24">X 000.0</text>
+        <text class="coord" x="300" y="204">Y 118.4</text>
+        <path class="toolpath" d="M200,60 A140,140 0 0 1 340,200 A140,140 0 0 1 200,340 A140,140 0 0 1 60,200 A140,140 0 0 1 200,60 Z"/>
+        <path class="rosace-fill" d="M200,90 C230,90 260,120 260,150 C260,180 230,200 200,200 C170,200 140,180 140,150 C140,120 170,90 200,90 Z
+          M200,200 C230,200 260,220 260,250 C260,280 230,310 200,310 C170,310 140,280 140,250 C140,220 170,200 200,200 Z
+          M90,200 C90,170 120,140 150,140 C180,140 200,170 200,200 C200,230 180,260 150,260 C120,260 90,230 90,200 Z
+          M200,200 C200,170 220,140 250,140 C280,140 310,170 310,200 C310,230 280,260 250,260 C220,260 200,230 200,200 Z"/>
+        <path class="cutline" d="M200,90 C230,90 260,120 260,150 C260,180 230,200 200,200 C170,200 140,180 140,150 C140,120 170,90 200,90 Z
+          M200,200 C230,200 260,220 260,250 C260,280 230,310 200,310 C170,310 140,280 140,250 C140,220 170,200 200,200 Z
+          M90,200 C90,170 120,140 150,140 C180,140 200,170 200,200 C200,230 180,260 150,260 C120,260 90,230 90,200 Z
+          M200,200 C200,170 220,140 250,140 C280,140 310,170 310,200 C310,230 280,260 250,260 C220,260 200,230 200,200 Z
+          M200,200 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section tight" id="categories">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow" data-i18n="cat.eyebrow">Catalogue</div><h2 data-i18n="cat.title">Six familles de pièces, un seul fichier de découpe.</h2></div>
+      <p data-i18n="cat.desc">Chaque catégorie regroupe des modèles prêts à commander ou personnalisables aux dimensions de votre intérieur.</p>
+    </div>
+    <div class="cat-grid reveal">
+      <a href="#produits" class="cat-card"><div class="idx" data-i18n="cat.1.idx">01 / Murale</div><h3 data-i18n="cat.1.title">Décoration murale</h3><div class="n" data-i18n="cat.1.n">312 modèles</div><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="35"/><circle cx="50" cy="50" r="20"/></svg></a>
+      <a href="#produits" class="cat-card"><div class="idx" data-i18n="cat.2.idx">02 / Lumière</div><h3 data-i18n="cat.2.title">Luminaires ajourés</h3><div class="n" data-i18n="cat.2.n">148 modèles</div><svg viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90"/></svg></a>
+      <a href="#produits" class="cat-card"><div class="idx" data-i18n="cat.3.idx">03 / Mobilier</div><h3 data-i18n="cat.3.title">Mobilier sur mesure</h3><div class="n" data-i18n="cat.3.n">96 modèles</div><svg viewBox="0 0 100 100"><rect x="15" y="15" width="70" height="70"/></svg></a>
+      <a href="#produits" class="cat-card"><div class="idx" data-i18n="cat.4.idx">04 / Signes</div><h3 data-i18n="cat.4.title">Signalétique & enseignes</h3><div class="n" data-i18n="cat.4.n">204 modèles</div><svg viewBox="0 0 100 100"><line x1="10" y1="30" x2="90" y2="30"/><line x1="10" y1="50" x2="90" y2="50"/><line x1="10" y1="70" x2="90" y2="70"/></svg></a>
+      <a href="#produits" class="cat-card"><div class="idx" data-i18n="cat.5.idx">05 / Objets</div><h3 data-i18n="cat.5.title">Objets décoratifs</h3><div class="n" data-i18n="cat.5.n">176 modèles</div><svg viewBox="0 0 100 100"><path d="M50 15 L85 85 L15 85 Z"/></svg></a>
+      <a href="#produits" class="cat-card"><div class="idx" data-i18n="cat.6.idx">06 / Cadeaux</div><h3 data-i18n="cat.6.title">Pièces personnalisées</h3><div class="n" data-i18n="cat.6.n">89 modèles</div><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="38"/><line x1="50" y1="12" x2="50" y2="88"/><line x1="12" y1="50" x2="88" y2="50"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="comment">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow" data-i18n="comment.eyebrow">Processus</div><h2 data-i18n="comment.title">Du fichier vectoriel à l'objet livré.</h2></div>
+      <p data-i18n="comment.desc">Trois étapes, du choix du modèle à la réception, sans jamais toucher une machine vous-même.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="num">01</div><h3 data-i18n="step.1.title">Choisissez votre pièce</h3><p data-i18n="step.1.desc">Parcourez nos modèles prêts à commander, en plusieurs tailles et finitions.</p></div>
+      <div class="step"><div class="num">02</div><h3 data-i18n="step.2.title">L'atelier usine la pièce</h3><p data-i18n="step.2.desc">Notre atelier CNC découpe, ponce et finit votre commande à partir du fichier validé.</p></div>
+      <div class="step"><div class="num">03</div><h3 data-i18n="step.3.title">Livraison à votre porte</h3><p data-i18n="step.3.desc">Confirmation par WhatsApp, suivi de fabrication, puis livraison protégée directement chez vous.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight" id="produits">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow" data-i18n="prod.eyebrow">Sélection</div><h2 data-i18n="prod.title">Créations récemment mises en ligne.</h2></div>
+      <p data-i18n="prod.desc">Pièces uniques ou petites séries, fabriquées à la commande dans notre atelier.</p>
+    </div>
+
+    <div class="prod-grid reveal">
+      <div class="prod-card">
+        <div class="prod-thumb"><span class="prod-tag" data-i18n-prod="p1.tag">Bois massif</span>
+          <img src="images/produit-1.jpg" alt="Panneau mural Mandala"></div>
+        <div class="prod-body">
+          <div class="maker">Atelier  — Sétif</div>
+          <h3 data-i18n-prod="p1.name">Panneau mural Mandala Ø 60 cm</h3>
+          <div class="prod-foot"><div class="price">4 500 <small>DA</small></div>
+            <a class="add" href="commande.html?id=p1">+</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-thumb"><span class="prod-tag" data-i18n-prod="p2.tag">MDF laqué</span>
+          <img src="images/produit-2.jpg" alt="Suspension géométrique hexagonale"></div>
+        <div class="prod-body">
+          <div class="maker">Atelier  — Sétif</div>
+          <h3 data-i18n-prod="p2.name">Suspension géométrique hexagonale</h3>
+          <div class="prod-foot"><div class="price">6 200 <small>DA</small></div>
+            <a class="add" href="commande.html?id=p2">+</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-thumb"><span class="prod-tag" data-i18n-prod="p3.tag">Métal découpé</span>
+          <img src="images/produit-3.jpg" alt="Étagère murale silhouette maison"></div>
+        <div class="prod-body">
+          <div class="maker">Atelier  — Sétif</div>
+          <h3 data-i18n-prod="p3.name">Étagère murale silhouette maison</h3>
+          <div class="prod-foot"><div class="price">3 900 <small>DA</small></div>
+            <a class="add" href="commande.html?id=p3">+</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-thumb"><span class="prod-tag" data-i18n-prod="p4.tag">Noyer massif</span>
+          <img src="images/produit-4.jpg" alt="Porte-nom calligraphié sur mesure"></div>
+        <div class="prod-body">
+          <div class="maker">Atelier  — Sétif</div>
+          <h3 data-i18n-prod="p4.name">Porte-nom calligraphié sur mesure</h3>
+          <div class="prod-foot"><div class="price">2 300 <small>DA</small></div>
+            <a class="add" href="commande.html?id=p4">+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="font-size:19px;"><span class="dot"></span>MR Décor</div>
+        <p style="color:var(--paper-dim); font-size:13.5px; margin-top:16px; max-width:280px; line-height:1.6;" data-i18n="footer.desc">Atelier algérien de création CNC et de décoration fabriquée à la demande.</p>
+      </div>
+      <div><h4 data-i18n="footer.col1">Catalogue</h4><ul>
+        <li><a href="#categories" data-i18n="footer.col1.l1">Décoration murale</a></li>
+        <li><a href="#categories" data-i18n="footer.col1.l2">Luminaires</a></li>
+        <li><a href="#categories" data-i18n="footer.col1.l3">Mobilier</a></li>
+      </ul></div>
+      <div><h4 data-i18n="footer.col2">Informations</h4><ul>
+        <li><a href="#comment" data-i18n="footer.col2.l2">Comment ça marche</a></li>
+        <li><a href="commande.html" data-i18n="footer.col2.l4">Mon panier</a></li>
+      </ul></div>
+      <div><h4 data-i18n="footer.col3">Support</h4><ul>
+        <li><a href="#" data-i18n="footer.col3.l1">Suivi de commande</a></li>
+        <li><a href="#" data-i18n="footer.col3.l2">Livraison</a></li>
+        <li><a href="#" data-i18n="footer.col3.l3">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="footer.copy">© 2026 MR Décor — Créateur CNC</span>
+     <span data-i18n="footer.number">WhatsApp : 0794603689</span>
+
+      <span data-i18n="footer.cities">Sétif ·</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

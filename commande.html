@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Votre commande — MR Décor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Markazi+Text:wght@500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><span class="dot"></span>MR Décor</a>
+    <div style="flex:1"></div>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Langue">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="order-header">
+    <a class="back" href="index.html#produits" data-i18n="order.continue">← Continuer mes achats</a>
+  </div>
+
+  <div class="order-title">
+    <h1 data-i18n="order.title">Votre commande</h1>
+    <p data-i18n="order.subtitle">Vérifiez vos articles, indiquez vos coordonnées, puis envoyez la commande directement à l'atelier par WhatsApp.</p>
+  </div>
+
+  <div class="order-grid">
+    <!-- Colonne gauche : articles -->
+    <div id="orderItemsWrap">
+      <div class="order-empty" id="orderEmpty" style="display:none;">
+        <p data-i18n="order.empty" data-i18n-html="true">Votre panier est vide.<br>Parcourez nos <a href="index.html#produits">créations</a> pour ajouter un article.</p>
+      </div>
+      <div class="order-items" id="orderItems"></div>
+      <button class="clear-cart-link" id="clearCart" data-i18n="order.clear" style="display:none;">Vider le panier</button>
+    </div>
+
+    <!-- Colonne droite : récapitulatif + formulaire + envoi WhatsApp -->
+    <div class="order-summary" id="orderSummary" style="display:none;">
+      <h3 data-i18n="order.delivery">Informations de livraison</h3>
+
+      <div class="field">
+        <label data-i18n="form.name">Nom complet</label>
+        <input type="text" id="custName" data-i18n-ph="form.name.ph" placeholder="Votre nom">
+      </div>
+      <div class="field">
+        <label data-i18n="form.phone">Téléphone</label>
+        <input type="tel" id="custPhone" data-i18n-ph="form.phone.ph" placeholder="05 xx xx xx xx">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label data-i18n="form.wilaya">Wilaya</label>
+          <input type="text" id="custWilaya" data-i18n-ph="form.wilaya.ph" placeholder="ex. Sétif">
+        </div>
+        <div class="field">
+          <label data-i18n="form.commune">Commune</label>
+          <input type="text" id="custCommune" data-i18n-ph="form.commune.ph" placeholder="ex. El Eulma">
+        </div>
+      </div>
+      <div class="field">
+        <label data-i18n="form.address">Adresse de livraison</label>
+        <textarea id="custAddress" rows="2" data-i18n-ph="form.address.ph" placeholder="Rue, immeuble, repère..."></textarea>
+      </div>
+
+      <div class="sub-row"><span data-i18n="cart.subtotal">Sous-total</span><span id="subtotalVal">0 DA</span></div>
+      <div class="sub-row"><span data-i18n="cart.shipping">Livraison</span><span data-i18n="cart.shippingVal">Calculée par l'atelier</span></div>
+      <div class="total-row"><span data-i18n="cart.total">Total</span><span id="totalVal">0 DA</span></div>
+
+      <button class="btn solid block" id="sendWhatsapp" data-i18n="cart.sendWa">Envoyer la commande via WhatsApp</button>
+
+      <div class="wa-note">
+        <span>↳</span>
+        <span data-i18n="cart.wanote" data-i18n-html="true">Votre commande sera envoyée par <b>WhatsApp</b> à l'atelier, qui vous confirmera le prix final et le délai de livraison.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom">
+      <span data-i18n="footer.copy">© 2026 MR Décor — Créateur CNC</span>
+           <span data-i18n="footer.number">WhatsApp : 0794603689</span>
+
+      <span data-i18n="footer.cities">Sétif</span>
+    </div>
+  </div>
+</footer>
+
+<script src="commande.js"></script>
+</body>
+</html>
