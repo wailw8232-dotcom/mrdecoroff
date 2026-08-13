@@ -4,17 +4,17 @@ const WHATSAPP_NUMBER = "213564563148";
 // PRODUITS (dupliqué de script.js — gardez les deux fichiers synchronisés)
 
 const PRODUCTS = {
-  p1: {  price : ,maker:'Atelier  — Sétif',
+  p1: {  price : '0',maker:'Atelier  — Sétif',
         name:{ fr:'Panneau mural Mandala Ø 60 cm', ar:'لوحة حائط ماندالا Ø 60 سم' } },
-  p2: { price : , maker:'Atelier  — Sétif',
+  p2: { price : '0',maker:'Atelier  — Sétif',
         name:{ fr:'Suspension géométrique hexagonale', ar:'مصباح معلّق هندسي سداسي' } },
-  p3: { price : , maker:'Atelier  — Sétif',
+  p3: { price : '0',maker:'Atelier  — Sétif',
         name:{ fr:'Étagère murale silhouette maison', ar:'رف حائط بتصميم منزل' } },
-  p4: {price : ,  maker:'Atelier  — Sétif',
+  p4: {price : '0',maker:'Atelier  — Sétif',
         name:{ fr:'Porte-nom calligraphié sur mesure', ar:'لوحة اسم بخط مخصص' } },
-  p5: { price : , maker:'Atelier  — Sétif',
+  p5: { price : '0',maker:'Atelier  — Sétif',
         name:{ fr:'Panneau  60 cm', ar:'لوحة   60 سم' } },
-        p6: { price : , maker:'Atelier  — Sétif',
+        p6: { price : '0',maker:'Atelier  — Sétif',
         name:{ fr:'Produit', ar:'لوحة  م' } },
 
 };
